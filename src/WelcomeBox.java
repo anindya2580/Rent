@@ -1,3 +1,6 @@
+
+import javax.swing.JFrame;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -26,32 +29,165 @@ public class WelcomeBox extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         label1 = new java.awt.Label();
+        label2Close = new java.awt.Label();
+        label4Min = new java.awt.Label();
+        jPanel2 = new javax.swing.JPanel();
+        button_Update = new java.awt.Button();
+        button_Delete = new java.awt.Button();
+        button_Insert = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        label1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        label1.setText("Welcome to Rent Management");
+        jPanel1.setBackground(new java.awt.Color(130, 224, 170));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+
+        label1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        label1.setForeground(new java.awt.Color(240, 240, 240));
+        label1.setText("Welcome ");
+
+        label2Close.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label2Close.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        label2Close.setForeground(new java.awt.Color(255, 255, 255));
+        label2Close.setText("X");
+        label2Close.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label2CloseMouseClicked(evt);
+            }
+        });
+
+        label4Min.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        label4Min.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        label4Min.setForeground(new java.awt.Color(255, 255, 255));
+        label4Min.setText("-");
+        label4Min.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                label4MinMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 301, Short.MAX_VALUE)
+                .addComponent(label4Min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(label2Close, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label4Min, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label2Close, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+
+        jPanel2.setBackground(new java.awt.Color(214, 234, 248));
+
+        button_Update.setBackground(new java.awt.Color(0, 102, 102));
+        button_Update.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        button_Update.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        button_Update.setForeground(new java.awt.Color(240, 240, 240));
+        button_Update.setLabel("Update Data");
+        button_Update.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_UpdateActionPerformed(evt);
+            }
+        });
+
+        button_Delete.setBackground(new java.awt.Color(0, 102, 102));
+        button_Delete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        button_Delete.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        button_Delete.setForeground(new java.awt.Color(240, 240, 240));
+        button_Delete.setLabel("Delete Data");
+        button_Delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_DeleteActionPerformed(evt);
+            }
+        });
+
+        button_Insert.setBackground(new java.awt.Color(0, 102, 102));
+        button_Insert.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        button_Insert.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        button_Insert.setForeground(new java.awt.Color(240, 240, 240));
+        button_Insert.setLabel("Insert Data");
+        button_Insert.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_InsertActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(144, 144, 144)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(button_Update, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button_Insert, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button_Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(button_Update, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(button_Insert, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(button_Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        button_Update.getAccessibleContext().setAccessibleName("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(93, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(139, 139, 139)
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(141, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void label2CloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label2CloseMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_label2CloseMouseClicked
+
+    private void label4MinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_label4MinMouseClicked
+        this.setState(JFrame.ICONIFIED);
+    }//GEN-LAST:event_label4MinMouseClicked
+
+    private void button_UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_UpdateActionPerformed
+       new login().setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_button_UpdateActionPerformed
+
+    private void button_DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_DeleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button_DeleteActionPerformed
+
+    private void button_InsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_InsertActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button_InsertActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,6 +225,13 @@ public class WelcomeBox extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Button button_Delete;
+    private java.awt.Button button_Insert;
+    private java.awt.Button button_Update;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private java.awt.Label label1;
+    private java.awt.Label label2Close;
+    private java.awt.Label label4Min;
     // End of variables declaration//GEN-END:variables
 }
